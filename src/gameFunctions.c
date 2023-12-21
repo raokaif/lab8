@@ -22,7 +22,21 @@ printWithSpaces(const char *str)
   }
 }
 
-revealGuessedLetter() {}
+revealGuessedLetter(const char *solution, char *reveledStr, char gussedChar)
+{
+  for (int i = 0; solution[i] != '\0'; i++)
+  {
+    if (solution[i] == gussedChar)
+    {
+      reveledStr[i] = gussedChar;
+      return 1;
+    }
+    else
+    {
+      return 0;
+    }
+  }
+}
 
 checkGuess() {}
 
