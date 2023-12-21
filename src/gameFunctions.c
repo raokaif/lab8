@@ -38,7 +38,17 @@ revealGuessedLetter(const char *solution, char *reveledStr, char gussedChar)
   }
 }
 
-checkGuess() {}
+checkGuess(const char *string1, const char *string2)
+{
+  if (strcmp(string1, string2) == 0)
+  {
+    return 1;
+  }
+  else
+  {
+    return 0;
+  }
+}
 
 void startGame(char word[25])
 {
